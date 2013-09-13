@@ -72,9 +72,10 @@ function showTasks(task) {
 };
 
 function editTasks(checkbox) {
-  var checkbox = $('<div class="checkbox"><label><input type="checkbox" value=""></label></div>')
-  $('.edit').click();
-  $('li').prepend(checkbox);
+  var deletebox = $('<button type="button" class="btn btn-danger">Delete</button>')
+  $('.edit').click( function() {
+    $('li').append(deletebox);
+  });  
 }
 
  
