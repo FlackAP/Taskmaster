@@ -1,0 +1,202 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative:700);
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: -30px;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+/*Custom CSS*/
+
+body {
+    background:url('../images/wood.jpg');
+}
+
+.page-title {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.first-letter {
+    font-size:34px;
+}
+ 
+.sidebar, .main {
+    min-height: 500px; 
+    display:inline-block;
+    vertical-align: top;
+    font-family: futura;
+}
+
+.sidebar {
+    background: rgba(110, 117, 117, 0.68);
+    padding:10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index:0;
+    box-shadow: 10px 10px 21px -4px #887;
+}
+
+.New, .Read, .Delete {
+    width:75%;
+    color:#000000;
+    margin: 10px;
+    margin-left:28px;
+    padding:10px;
+    background: rgba(248, 227, 196, 0.58);
+}
+
+.main {
+    background:rgba(255, 255, 255, 0.63);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 21px -4px #887;
+    z-index:10;
+}
+
+.task-header {
+    font-size: 24;
+    text-shadow: hsl(227,4%,56%) -1px 1px;
+}
+
+.tasklist {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.edit {
+    float:right;
+    display:inline-block;
+    margin-top:-34px;
+}
+
+.cog:hover {
+    -webkit-transform:rotate(80deg);
+    -webkit-transition: -webkit-transform 2s ease;
+
+}
+
+.cog {
+    font-size:18px;
+    -webkit-transition: -webkit-transform 0.8s ease;
+}
+
+.edit:hover {
+    color:black;
+    cursor: pointer;
+}
+
+hr {
+    border-color: black;
+
+}
+
+.input {
+    display:inline-block;
+}
+
+.btn-small {
+    margin: 4px;
+    margin-left: 6px;
+    width: 42%;
+    display: inline-block;
+}
+
+.foot {
+padding-top: 19px;
+color: #777;
+margin: 5px;
+}
+
+
+.warning {
+    color:white;
+    background:red;
+    -webkit-transition: background-color ease 2s;
+}
