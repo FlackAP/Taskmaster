@@ -73,10 +73,10 @@ function showTasks(task) {
 
 function editTasks(checkbox) {
   var deletebox = $('<button type="button" class="btn btn-danger">Delete</button>')
-  $('.edit').click( function() {
+  $('.edit').click(function() {
     $('li').append(deletebox);
   });  
-}
+};
 
  
 
