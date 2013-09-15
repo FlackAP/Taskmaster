@@ -4,14 +4,22 @@
     describe('the new button', function () {
         it('should make the input appear when clicked', function() {
         	$(".New").click();
- 			//hell if i know how to test show vs hide and hell if the internet is going to help me
+ 			//not sure how to test for hiding and showing. put test on hold for now.
         });
         
     });
 
+    describe('the edit button', function () {
+        it('should make delete buttons appear when clicked', function () {
+            $('.edit').click(editTasks);
+            expect($('ul')).to.contain($('button'))
+        });
+
+    });
+
     describe('the discard button', function() {
     	it('should clear the input form', function() {
-    		$('input').val('hello')
+    		$('input').val('hello');
     		$('.discard').click();
     		expect($('input').val).to.be('');
     	});

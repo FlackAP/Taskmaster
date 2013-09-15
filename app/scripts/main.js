@@ -69,14 +69,16 @@ function createTask(task) {
 function showTasks(task) {
 	var task= new TaskClass();
 	$('input').val(task.get('taskName') )
-};
+}
 
 function editTasks() {
-  var deletebox = $('<button type="button" class="btn btn-danger">Delete</button>')
-  $('.edit').click(function() {
-    $('.tasks').append(deletebox);
+  
+  $('li').each(function(){
+      var deletebox = $('<button type="button" class="btn btn-danger">Delete</button>')
+      $('.tasks').append(deletebox);
   });  
 };
 
+$('.edit').click(editTasks);
  
 
