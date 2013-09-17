@@ -73,12 +73,13 @@ function showTasks(task) {
 
 function editTasks() {
   
-  $('li').each(function(){
-      var deletebox = $('<button type="button" class="btn btn-danger">Delete</button>')
-      $('.tasks').append(deletebox);
-  });  
+  $('.tasks li').each(function(){
+      var deletebox = $('<button type="button" class="btn btn-danger">x</button>')
+      $(this).append(deletebox);
+  });
 };
 
 $('.edit').click(editTasks);
+
  
 
