@@ -217,3 +217,11 @@ hr {
     background:red;
     -webkit-transition: background-color ease 2s;
 }
+
+.tasks.active li .delete {
+    display:inline-block;
+}
+
+.tasks li .delete {
+    display:none;
+}

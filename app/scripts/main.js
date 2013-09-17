@@ -61,25 +61,34 @@ function validateForm() {
 }
 
 function createTask(task) {
-  var li = $('<li>'+task.get('taskName')+'</li>')
+  var li = $('<li>'+task.get('taskName')+'<button type="button" class="btn delete btn-danger">x</button></li>')
   $('.tasks').append(li)
   showTasks()
 };
 
 function showTasks(task) {
 	var task= new TaskClass();
-	$('input').val(task.get('taskName') )
+	$('input').val(task.get('taskName'))
 }
 
 function editTasks() {
+  $('.tasks').toggleClass('active')
   
-  $('.tasks li').each(function(){
-      var deletebox = $('<button type="button" class="btn btn-danger">x</button>')
-      $(this).append(deletebox);
-  });
+
+
+  // $('.tasks li').each(function(){
+  //     var deletebox = $('<button type="button" class="btn delete btn-danger">x</button>')
+  //     console.log($(this).find('.delete'))
+  //     if ($(this).find('.delete').length) {
+  //       $(this).find('.delete').remove();
+  //       console.log('gonna detel the button')
+  //     }
+  //     else {
+  //       $(this).append(deletebox);
+  //     }
+  // });  
 };
 
 $('.edit').click(editTasks);
-
  
 
