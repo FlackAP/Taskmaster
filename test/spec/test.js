@@ -4,6 +4,8 @@
     describe('the new button', function () {
         it('should make the input appear when clicked', function() {
         	$(".New").click();
+            var newButton = $('input').css('display')
+            expect(newButton).to.equal('inline-block')
  			//not sure how to test for hiding and showing. put test on hold for now.
         });
         
@@ -11,8 +13,9 @@
 
     describe('the edit button', function () {
         it('should make delete buttons appear when clicked', function () {
-            $('.edit').click(editTasks);
-            expect($('ul')).to.contain($('button'))
+            $('.edit').click();
+            var deletebutton = $('.btn-danger');
+            expect(deletebutton.length).to.equal(1);
         });
 
     });
@@ -20,8 +23,9 @@
     describe('the discard button', function() {
     	it('should clear the input form', function() {
     		$('input').val('hello');
+            var newInputVal = $('input').css('placeholder')
     		$('.discard').click();
-    		expect($('input').val).to.be('');
+    		expect(newInputVal).to.equal('');
     	});
     });
 

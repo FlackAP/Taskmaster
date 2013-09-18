@@ -13,43 +13,48 @@
     <!-- assertion framework -->
     <script src="lib/chai.js"></script>
     <script>var expect = chai.expect</script>
-    <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills pull-right">
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <h3 class="page-title">
-                <span class="first-letter">T</span>ask<span class="first-letter">M</span>aster</h3>
-            <p></p>
-        </div>
+ 
 
-        <div class="row">
-            <div class="col-xs-6 col-md-4 sidebar">
-                <button type="button" class="btn btn-default New">New Task <span class="glyphicon glyphicon-plus"></span></button>
-                <button type="button" class="btn btn-default Read">Mark As Read <span class="glyphicon glyphicon-ok"></span></button>
-                <button type="button" class="btn btn-default Delete">Delete Selected <span class="glyphicon glyphicon-trash"></span></button>
-                    
+     <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <h3 class="page-title">
+                  <img class="icon" src="images/icon.png"><span class="first-letter">T</span>ask<span class="first-letter">M</span>aster
+                </h3>
+                <p class="info"></p>
             </div>
 
+            <div class="row">
+                <div class="col-xs-6 col-md-4 sidebar">
+                    <button type="button" class="btn btn-default New">New Task <span class="glyphicon glyphicon-plus"></span></button>
+                </div>
 
-            <div class="col-xs-12 col-md-8 main">
-                <h3 class="task-header">Tasks</h3>
-                <ul class="tasks"></ul>
-                <div class="input">
-                    <form class="form-inline">
-                        <input type="text" class="input-medium" placeholder="What needs to be done?"></input>
-                        <button type="submit" class="btn btn-small submit">Save</button>
-                        <button type="submit" class="btn btn-small discard">Discard</button>
-                    </form>
+                <div class="col-xs-12 col-md-8 main">
+                    <h3 class="task-header">Tasks</h3>
+                    <div class="edit inactive">
+                        <p><span class="cog glyphicon glyphicon-cog"></span>Edit Tasks</p>
+                    </div>
+                    <hr>
+
+                    <div class="input">
+                        <form class="form-inline">
+                            <input type="text" class="input-medium" placeholder="What needs to be done?"></input>   
+                        </form>
+                        <button class="btn btn-small submit">Save</button>
+                        <button class="btn btn-small discard">Discard</button>
+                    </div>
+
+                    <div class="tasklist">
+                    <ul class="tasks"></ul>
+                    </div class>
+                   
                 </div>
             </div>
-        </div>
-
-        <div class="foot">
-                <p></p>
-        </div>
-    </div>
-
+            <div class="foot">
+                <p>Thank you for using TaskMaster!</p>
+            </div>
 
 
 

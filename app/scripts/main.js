@@ -72,10 +72,8 @@ function showTasks(task) {
 }
 
 function editTasks() {
-  $('.tasks').toggleClass('active')
+  $('.tasks').toggleClass('active') //Much Simpler
   
-
-
   // $('.tasks li').each(function(){
   //     var deletebox = $('<button type="button" class="btn delete btn-danger">x</button>')
   //     console.log($(this).find('.delete'))
