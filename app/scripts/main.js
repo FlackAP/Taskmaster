@@ -24,11 +24,14 @@ tasks.fetch({
 
 $('.submit').click(function(){
 	if (validateForm()) {
+      var randomNumber = Math.floor(Math.random()*9999999)
   		var task = new TaskClass();
   		task.set('taskName', $('input').val());
+      task.set('taskId', randomNumber)
  
   		task.save(null, {
     		success: function(result){
+          console.log(result.objectId)
       		createTask(result)
       		$('.input').hide()
 
@@ -61,9 +64,10 @@ function validateForm() {
 }
 
 function createTask(task) {
-  var li = $('<li>'+task.get('taskName')+'<button type="button" class="btn delete btn-danger">x</button></li>')
+  var li = $('<li class='+task.get("taskId")+'>'+task.get('taskName')+'<button type="button" id='+task.get("taskId")+' class="btn delete btn-danger">x</button></li>')
   $('.tasks').append(li)
   showTasks()
+
 };
 
 function showTasks(task) {
@@ -71,9 +75,14 @@ function showTasks(task) {
 	$('input').val(task.get('taskName'))
 }
 
-function editTasks() {
+function editTasks(task) {
   $('.tasks').toggleClass('active') //Much Simpler
+
+  $('.delete').click(function(){
+    deleteTask(task, event)
+  })
   
+  //UGLY OLD WAY OF ADDING DELETE BOXES
   // $('.tasks li').each(function(){
   //     var deletebox = $('<button type="button" class="btn delete btn-danger">x</button>')
   //     console.log($(this).find('.delete'))
@@ -88,5 +97,29 @@ function editTasks() {
 };
 
 $('.edit').click(editTasks);
- 
+
+function deleteTask(task, event) {
+
+  var clickedId = event.target.id
+  console.log("this here was clicked", clickedId)
+  var query = new Parse.Query(TaskClass);
+  var id = parseInt(clickedId)
+  $("."+id).hide()
+  query.equalTo("taskId", id)
+  query.find({
+    success: function(taskToDestroy) {
+      console.log("Successfully retrieved " + taskToDestroy);
+      var task = taskToDestroy[0]
+      task.destroy({
+        success: function(stuff){
+          console.log("destroyed!!!!!!!")
+        },
+        error: function(stuff, error){
+          console.log("error, shit")
+        }
+      })
+    }
+  });
+
+}
 
